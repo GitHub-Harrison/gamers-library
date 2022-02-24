@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
-if os.path.isfile('env.py'):
+if os.path.exists('env.py'):
     import env  # noqa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,10 +29,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['gamers-library.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = []
+host = os.environ.get('SITE_NAME')
+if host:
+    ALLOWED_HOSTS.append(host)
 
 # Application definition
 
