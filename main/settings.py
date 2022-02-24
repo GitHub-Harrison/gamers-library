@@ -44,11 +44,20 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'library',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECt_URL = '/'
+LOGOUT_REDIRECt_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
