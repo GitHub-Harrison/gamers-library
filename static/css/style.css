@@ -1,0 +1,30 @@
+
+#body {
+    background-color: rgba(214, 214, 214, 0.945);
+    border: 5px black solid;
+}
+
+.banner {
+    background-color: black;
+    color: white;
+}
+
+.main-nav {
+    background-color: white;
+    display: flex;
+    border: 5px orange solid;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.nav-item {
+    text-decoration: none;
+    /* border: 2px purple solid; */
+}
+
+.content {
+    border: 5px blue solid;
+    padding: 10px;
+}
