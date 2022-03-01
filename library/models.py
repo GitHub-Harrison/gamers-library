@@ -56,3 +56,12 @@ class Post(models.Model):
     release_date = models.CharField(max_length=20)
     platform = models.CharField(max_length=6, choices=GAMING_PLATFORM, default=ALL)
     likes = models.ManyToManyField(User, related_name='game_likes', blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']  # is it possible to use release date instead?
+
+    def __str__(self):
+        return self.title
+
+    # add likes later
