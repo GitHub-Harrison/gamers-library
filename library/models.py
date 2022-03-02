@@ -51,15 +51,16 @@ class Post(models.Model):
     title = models.CharField(max_length=180, unique=True)
     image = CloudinaryField('image', default='palceholder')
     description = models.TextField()
-    author = models.ForeignKey(User, on_delete=CASCADE, related_name='game_post')
+    # author = models.ForeignKey(User, on_delete=CASCADE, related_name='game_post')
     genre = models.CharField(max_length=80, choices=GENRES, default=SHOOTER)
     release_date = models.CharField(max_length=20)
-    platform = models.CharField(max_length=6, choices=GAMING_PLATFORM, default=ALL)
+    platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
     likes = models.ManyToManyField(User, related_name='game_likes', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-created_on']  # is it possible to use release date instead?
+        ordering = ['-created_on']
+        # is it possible to use release date instead?
 
     def __str__(self):
         return self.title
