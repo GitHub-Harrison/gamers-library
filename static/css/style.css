@@ -13,13 +13,19 @@
     color: white;
 }
 
+/* div styling */
+
+div {
+    padding: 10px;
+}
+
 /* home styling */
 
-#carousel-pad {
+/* #carousel-pad {
     padding: 10px;
     margin: auto;
 }
 
 .carousel-item {
     height: 50%;
-}
+} */
