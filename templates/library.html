@@ -5,5 +5,15 @@ Gamers Library | Library
 {% endblock %}
 
 {% block content %}
-<h1>Library Page</h1>
+    <h1>Library Page</h1>
+
+    <table>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>{{ post.image }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
 {% endblock %}
