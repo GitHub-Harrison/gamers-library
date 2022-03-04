@@ -4,4 +4,11 @@ from .models import Post
 
 
 def library(response):
-    return render(response, './library.html')
+    posts = Post.objects.all()
+    context = {
+        'posts': posts
+    }
+    return render(response, './library.html', context)
+
+def add_game(response):
+    return render(response, './add_game.html')
