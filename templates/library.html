@@ -8,10 +8,17 @@ Gamers Library | Library
     <h1>Library Page</h1>
 
     <table>
+        <!-- style the table -->
         {% for post in posts %}
             <tr>
+                <!-- image is showing as cloudinary id not actual image, fix -->
                 <td>{{ post.title }}</td>
                 <td>{{ post.image }}</td>
+                <td>{{ post.description }}</td>
+                <td>{{ post.platform }}</td>
+                <td>{{ post.release_date }}</td>
+                <td>{{ post.likes }}</td>
+                <td>{{ post.created_on }}</td>
             </tr>
         {% endfor %}
     </table>
