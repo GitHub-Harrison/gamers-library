@@ -6,21 +6,35 @@ Gamers Library | Library
 
 {% block content %}
     <h1>Library Page</h1>
-
-    <table>
-        <!-- style the table -->
-        {% for post in posts %}
-            <tr>
-                <!-- image is showing as cloudinary id not actual image, fix -->
-                <td>{{ post.title }}</td>
-                <td>{{ post.image }}</td>
-                <td>{{ post.description }}</td>
-                <td>{{ post.platform }}</td>
-                <td>{{ post.release_date }}</td>
-                <td>{{ post.likes }}</td>
-                <td>{{ post.created_on }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-
+    <br>
+    <div class="col-md-">
+        <table class="center">
+            <thead>
+                <tr>
+                    <th style="width:8%">Title</th>
+                    <th style="width:10%">Image</th>
+                    <th style="width:25%">Description</th>
+                    <th style="width:10%">Genre</th>
+                    <th style="width:8%">Platform</th>
+                    <th style="width:8%">Release Date</th>
+                    <th style="width:12%">Created On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- style the table -->
+                {% for post in posts %}
+                <tr>
+                    <!-- image is showing as cloudinary id not actual image, fix -->
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.image }}</td>
+                    <td>{{ post.description }}</td>
+                    <td>{{ post.genre }}</td>
+                    <td>{{ post.platform }}</td>
+                    <td>{{ post.release_date }}</td>
+                    <td>{{ post.created_on }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
