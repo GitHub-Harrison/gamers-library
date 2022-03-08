@@ -8,5 +8,31 @@ Gamers Library | Add Games
     <h1>Add a Game</h1>
 
     <!-- add form here for user input -->
+    <form action="POST">
+        <label for="title">Game Title:</label> <br>
+        <input type="text" id="title" name="title"> <br>
+        <label for="image">Image:</label> <br>
+        <input type="file" id="image" name="image"> <br>
+        <label for="description">Description:</label> <br>
+        <textarea name="description" id="description" cols="60" rows="5"></textarea> <br>
+        <label for="genre">Primary Genre:</label>
+        <select name="genre" id="genre">
+            <option value="shooter">Shooter</option>
+            <option value="action_adv">Action Adventure</option>
+            <option value="moba">Moba</option>
+            <option value="racing">Racing</option>
+            <option value="sim">Simulation</option>
+            <option value="battle_royale">Battle Royale</option>
+            <option value="rts">Real-time Strategy</option>
+            <option value="puzzle_plat">Puzzle Platform</option>
+            <option value="sports">Sports</option>
+            <option value="mmo">MMO</option>
+            <option value="single">Singleplayer</option>
+            <option value="coop">Co-op</option>
+            <option value="rpg">Role-playing Game</option>
+        </select> <br>
+        <label for="release_date">Release Date:</label> <br>
+        <input type="month" id="release_date" name="release_date"> 
+    </form>
 
 {% endblock %}
