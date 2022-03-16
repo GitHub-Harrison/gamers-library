@@ -60,5 +60,26 @@ td {
 }
 
 tr:hover {
-    background-color: #D6EEEE;
+    background-color: #b6e7e7;
+}
+
+/* form styling */
+
+.form-center {
+    display:flex;
+    justify-content: center;
+}
+
+form {
+    /* border: 1px solid black; */
+    background-color: beige;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+#submit-btn {
+    display: block;
+    margin: 0 auto;
 }
