@@ -5,11 +5,8 @@ from .models import Post
 
 def library(response):
     posts = Post.objects.all()
+    template = 'library/library.html'
     context = {
         'posts': posts
     }
-    return render(response, './library.html', context)
-
-
-def add_game(response):
-    return render(response, './add_game.html')
+    return render(response, template, context)
