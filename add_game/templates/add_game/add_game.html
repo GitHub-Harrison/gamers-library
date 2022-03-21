@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Gamers Library | Add Games
+{% endblock %}
+
+{% block content %}
+    <h1>Add a Game</h1>
+
+    <!-- add form here for user input -->
+    <div class="form-center">
+        <form method="POST">
+            {% csrf_token %}
+            <label class="pad" for="id_title">Game Title:</label> <br> 
+            {{ form.title }} <br>
+            <label class="pad" for="id_image">Image:</label> <br>
+            {{ form.image }} <br>
+            <label class="pad" for="id_description">Description:</label> <br>
+            {{ form.description }} <br>
+            <label class="pad" for="id_genre">Primary Genre:</label>
+            {{ form.genre }} <br>
+            <label class="pad" for="id_platform">Platform:</label>
+            {{ form.platform }} <br>
+            <label class="pad" for="id_release_date">Release Date:</label>
+            {{ form.release_date }} <br>
+            <br>
+            <button type="submit" id="submit-btn" class="pad">Add Game</button>
+        </form>
+    </div>
+
+{% endblock %}
