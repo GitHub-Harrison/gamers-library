@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'library',
+    'add_game',
 ]
 
 SITE_ID = 1
