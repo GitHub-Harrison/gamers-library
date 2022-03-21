@@ -9,7 +9,8 @@ Gamers Library | Add Games
 
     <!-- add form here for user input -->
     <div class="form-center">
-        <form action="POST">
+        <form method="POST" action="">
+            {% csrf_token %}
             <label class="pad" for="title">Game Title:</label> <br>
             <input class="pad" type="text" id="title" name="title"> <br>
             <label class="pad" for="image">Image:</label> <br>
