@@ -1,16 +1,17 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-# from .forms import AddGameForm
-
-# Create your views here.
+from django.shortcuts import render, redirect
+from .forms import AddGameForm
+from library.views import library
 
 
-# def post_game(request):
-#     if request.method == 'POST':
-#         form = AddGameForm(request.POST)
-#         if form.is_valid():
-#             return HttpResponseRedirect('/library/')
-
-
-def add_game(response):
-    return render(response, './add_game.html')
+def add_game(request):
+    if request.method == 'POST':
+        form = AddGameForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(library)
+    form = AddGameForm()
+    template = 'add_game/add_game.html'
+    context = {
+        'form': form
+    }
+    return render(request, template, context)
