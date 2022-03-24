@@ -23,11 +23,10 @@ Gamers Library | Library
                 <!-- style the table -->
                 {% for post in posts %}
                 <tr>
-                    <!-- image is showing as cloudinary id not actual image, fix -->
                     <td>{{ post.title }}</td>
                     <td>
                         {% if "placeholder" in post.image.url %}
-                        <img src="https://proteanbusiness.com/wp-content/themes/finacia1/assets/images/no-image/No-Image-Found-400x264.png" alt="placeholder image" class="w-50">
+                        <img src="../../../media/placeholder.jpg" alt="placeholder image" class="w-50">
                         {% else %}
                         <img src="{{ post.image.url }}" alt="" class="w-50">
                         {% endif %}
