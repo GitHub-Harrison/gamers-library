@@ -50,6 +50,7 @@ th {
     padding-right: 10px;
     background-color: rgb(192, 192, 192);
     border-bottom: 2px solid black;
+    width: fit-content;
 }
 
 td {
@@ -57,6 +58,8 @@ td {
     padding-right: 10px;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+    width: fit-content;
+    height: fit-content;
 }
 
 tr:hover {
