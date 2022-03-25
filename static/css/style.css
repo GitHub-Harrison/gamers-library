@@ -89,3 +89,9 @@ form {
     display: block;
     margin: 0 auto;
 }
+
+.btn-rounded {
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0);
+    margin: auto;
+}
