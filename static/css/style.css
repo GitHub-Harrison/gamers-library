@@ -90,6 +90,8 @@ form {
     margin: 10px;
 }
 
+/* button styling */
+
 #submit-btn {
     display: block;
     margin: 0 auto;
@@ -99,4 +101,14 @@ form {
     border-radius: 20px;
     box-shadow: 2px 2px 3px 3px rgb(0, 0, 0);
     margin: auto;
+}
+
+/* login/logout/register styling */
+
+.log-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
 }
