@@ -109,6 +109,10 @@ form {
     margin: auto;
 }
 
+.btn-center {
+    text-align: center;
+}
+
 /* login/logout/register styling */
 
 .log-center {
