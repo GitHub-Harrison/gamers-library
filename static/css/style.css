@@ -39,25 +39,30 @@ table {
 .center {
     margin-left: auto;
     margin-right: auto;
-  }
-
-tr {
-    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 th {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(192, 192, 192);
-    border-bottom: 2px solid black;
-    width: fit-content;
+    background-color: rgb(72, 247, 223);
+}
+
+.th-1 {
+    width: 10%;
+}
+
+.th-2 {
+    width: 24%;
+}
+
+.th-3 {
+    width: 13%;
 }
 
 td {
     padding-left: 10px;
     padding-right: 10px;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border: 1px solid black;
     width: fit-content;
     height: fit-content;
 }
