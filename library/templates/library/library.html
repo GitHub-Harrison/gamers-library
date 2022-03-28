@@ -11,12 +11,12 @@ Gamers Library | Library
         <table>
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Image</th>
-                    <th>Description</th>
-                    <th>Genre</th>
-                    <th>Platform</th>
-                    <th>Release Date</th>
+                    <th class="th-1">Title</th>
+                    <th class="th-2">Image</th>
+                    <th class="th-2">Description</th>
+                    <th class="th-3">Genre</th>
+                    <th class="th-3">Platform</th>
+                    <th class="th-3">Release Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +26,7 @@ Gamers Library | Library
                     <td>{{ post.title }}</td>
                     <td>
                         {% if "placeholder" in post.image.url %}
-                        <img src="../../../media/placeholder.jpg" alt="placeholder image" class="w-50">
+                        <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="placeholder image" class="w-50">
                         {% else %}
                         <img src="{{ post.image.url }}" alt="" class="w-50">
                         {% endif %}
