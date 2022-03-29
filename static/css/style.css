@@ -58,19 +58,17 @@ th {
 }
 
 .th-2 {
-    width: 24%;
+    width: 23%;
 }
 
 .th-3 {
-    width: 13%;
+    width: 35%;
 }
 
 td {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     border: 1px solid black;
-    width: fit-content;
-    height: fit-content;
 }
 
 tr:hover {
