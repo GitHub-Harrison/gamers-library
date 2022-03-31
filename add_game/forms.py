@@ -6,7 +6,7 @@ class AddGameForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ['title', 'image', 'description', 'genre', 'platform' , 'release_date']
+        fields = ['title', 'image', 'description', 'genre', 'platform', 'release_date']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'pad'}),
             'image': forms.FileInput(attrs={'class': 'pad'}),
