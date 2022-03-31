@@ -7,10 +7,9 @@ from .models import Post
 def library(response):
     posts = Post.objects.all()
 
-    # changing get_page() works but doesn't work via the next button on webpage
     post_paginator = Paginator(posts, 5)
     page_num = response.GET.get('page')
-    page = post_paginator.get_page(1)
+    page = post_paginator.get_page(page_num)
 
     template = 'library/library.html'
     context = {
