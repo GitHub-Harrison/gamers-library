@@ -15,6 +15,10 @@
 
 <div class="log-center">
     <form class="login" method="POST" action="{% url 'account_login' %}">
+        <h1>Login</h1>
+        <p>{% blocktrans %}If you have not created an account yet, then please
+        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
