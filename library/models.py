@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
+    # tidy the below - genres/platform
     SHOOTER = 'Shooter'
     ACTION_ADV = 'Action adventure'
     MOBA = 'MOBA'

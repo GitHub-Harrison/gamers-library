@@ -13,7 +13,9 @@
     <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 </div>
 
+<!-- div for centering main content -->
 <div class="log-center">
+    <!-- form for login -->
     <form class="login" method="POST" action="{% url 'account_login' %}">
         <h1>Login</h1>
         <p>{% blocktrans %}If you have not created an account yet, then please

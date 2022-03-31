@@ -21,11 +21,12 @@ Gamers Library | Library
                 </tr>
             </thead>
             <tbody>
-                <!-- style the table -->
+                <!-- for loop to show all game posts added to the database -->
                 {% for post in posts %}
                 <tr>
                     <td>{{ post.title }}</td>
                     <td>
+                        <!-- if statement to show uploaded image or default placeholder image -->
                         {% if "placeholder" in post.image.url %}
                         <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-50">
                         {% else %}
