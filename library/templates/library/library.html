@@ -11,6 +11,8 @@ Gamers Library | Library
     <div class="col-md-8 center">
         <h2>Total Number of Games: {{ count }}</h2>
         <br>
+        <h3>Page Number: {{ page.number }}</h3>
+        <br>
         <table>
             <thead>
                 <tr>
@@ -24,7 +26,7 @@ Gamers Library | Library
             </thead>
             <tbody>
                 <!-- for loop to show all game posts added to the database -->
-                {% for post in posts %}
+                {% for post in page.object_list %}
                 <tr>
                     <td>{{ post.title }}</td>
                     <td>
@@ -43,5 +45,14 @@ Gamers Library | Library
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+    <!-- previous/next page -->
+    <div class="page-links">
+        {% if page.has_previous %}
+        <a href="{% url 'library' %}?page={{ page.previous_page_number }}">Previous Page</a>
+        {% endif %}
+        {% if page.has_next %}
+        <a href="{% url 'library' %}?page={{ page.next_page_number }}">Next Page</a>
+        {% endif %}
     </div>
 {% endblock %}
