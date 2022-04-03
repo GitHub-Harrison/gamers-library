@@ -21,6 +21,10 @@ One of the first things I did after deciding on what my project was to be able w
 ## Wireframes
 Before I started any of the coding I first created some wireframes for how I envisioned the project to look.
 
+![Home Page Wireframe](documentation/wireframes/home-wireframe.png)
+![Library Page Wireframe](documentation/wireframes/library-wireframe.png)
+![Add Game Wireframe](documentation/wireframes/add-game-wireframe.png)
+![Login Wireframe](documentation/wireframes/login-wireframe.png)
 
 ## Features
 
