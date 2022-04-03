@@ -39,6 +39,17 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ## Features
 
+* Navigation Bar
+* Welcome Text
+* Image Carousel
+* Table of Library Contents
+* Number of Items
+* Page Number
+* Pagination
+* Add Game Form
+* Login
+* Register
+* Logout
 
 ## Data Model ?
 
