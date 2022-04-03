@@ -46,13 +46,16 @@ Gamers Library | Library
             </tbody>
         </table>
     </div>
+
     <!-- previous/next page add more styling -->
     <div class="col-md-2 center">
         {% if page.has_previous %}
         <a href="{% url 'library' %}?page={{ page.previous_page_number }}">Previous Page</a>
         {% endif %}
+        <h3>Page: {{ page.number }}</h3>
         {% if page.has_next %}
         <a href="{% url 'library' %}?page={{ page.next_page_number }}">Next Page</a>
         {% endif %}
     </div>
+
 {% endblock %}
