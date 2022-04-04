@@ -11,8 +11,6 @@ Gamers Library | Library
     <div class="col-md-8 center">
         <h2>Total Number of Games: {{ count }}</h2>
         <br>
-        <h3>Page Number: {{ page.number }}</h3>
-        <br>
         <table>
             <thead>
                 <tr>
@@ -48,14 +46,23 @@ Gamers Library | Library
     </div>
 
     <!-- previous/next page add more styling -->
-    <div class="col-md-2 center">
-        {% if page.has_previous %}
-        <a href="{% url 'library' %}?page={{ page.previous_page_number }}">Previous Page</a>
-        {% endif %}
-        <h3>Page: {{ page.number }}</h3>
-        {% if page.has_next %}
-        <a href="{% url 'library' %}?page={{ page.next_page_number }}">Next Page</a>
-        {% endif %}
-    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+
+            {% if page.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'library' %}?page={{ page.previous_page_number }}">Previous</a></li>
+            {% endif %}
+
+            <li class="page-item disabled"><a href="#" class="page-link">Page: {{ page.number }} of {{ page.paginator.num_pages }}</a></li>
+
+            {% if page.has_next %}
+                <li class="page-item"><a class="page-link" href="{% url 'library' %}?page={{ page.next_page_number }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page.paginator.num_pages }}">Last &raquo</a></li>
+            {% endif %}
+
+        </ul>
+    </nav>
 
 {% endblock %}
