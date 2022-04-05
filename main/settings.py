@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'cispy_forms',
+    'crispy_forms',
     'library',
     'add_game',
 ]
