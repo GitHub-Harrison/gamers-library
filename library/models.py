@@ -56,7 +56,6 @@ class Post(models.Model):
     genre = models.CharField(max_length=80, choices=GENRES, default=SHOOTER)
     release_date = models.CharField(max_length=20)
     platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
-    likes = models.ManyToManyField(User, related_name='game_likes', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -75,6 +74,8 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
 
     class Meta:
         ordering = ["created_on"]
