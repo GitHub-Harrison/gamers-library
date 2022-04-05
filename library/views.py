@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.core.paginator import Paginator
 from .models import Post
-from .forms import CommentForm
+# from .forms import CommentForm
 
 
 def library(response):
