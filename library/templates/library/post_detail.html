@@ -3,6 +3,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
     <div>
         <div>
             <div>
@@ -75,6 +77,18 @@
                     <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                  {% %}
+                </form>
             </div>
         </div>
     </div>
