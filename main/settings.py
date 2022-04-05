@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'cispy_forms',
     'library',
     'add_game',
 ]
@@ -68,6 +69,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECt_URL = '/'
 LOGOUT_REDIRECt_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
