@@ -26,7 +26,9 @@ Gamers Library | Library
                 <!-- for loop to show all game posts added to the database -->
                 {% for post in page.object_list %}
                 <tr>
-                    <td>{{ post.title }}</td>
+                    <td>
+                        {{ post.title }}
+                    </td>
                     <td>
                         <!-- if statement to show uploaded image or default placeholder image -->
                         {% if "placeholder" in post.image.url %}
