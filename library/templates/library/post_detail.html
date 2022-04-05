@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+<!-- {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
@@ -9,13 +9,10 @@
         <div>
             <div>
                 <div>
-                    <!-- Post title goes in these h1 tags -->
                     <h1>{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
                     <p>{{ post.author }} | {{ post.created_on }}</p>
                 </div>
                 <div>
-                    <!-- The featured image URL goes in the src attribute -->
                     {% if "placeholder" in post.image.url %}
                         <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-50">
                     {% else %}
@@ -30,20 +27,16 @@
         <div>
             <div>
                 <div>
-                    <!-- The post content goes inside the card-text. -->
-                    <!-- Use the | safe filter inside the template tags -->
                     <p>
                         {{ post.content | safe }}
                     </p>
                     <div>
                         <div>
-                            <!-- The number of likes goes before the closing strong tag -->
                             <strong><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                         </div>
                         <div>
                             {% with comments.count as total_comments %}
                             <strong><i class="far fa-comments"></i>
-                                <!-- Our total_comments variable goes before the closing strong tag -->
                                 {{ total_comments }}</strong>
                             {% endwith %}
                         </div>
@@ -60,21 +53,16 @@
             <div>
                 <h3>Comments:</h3>
                 <div>
-                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                     {% for comment in comments %}
                     <div>
                         <p>
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                             {{ comment.name }}
                             <span>
-                                <!-- The comment's created date goes here -->
                                 {{ comment.created_on }}
                             </span> wrote:
                         </p>
-                        <!-- The body of the comment goes before the | -->
                         {{ comment.body | linebreaks }}
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
             </div>
@@ -87,8 +75,11 @@
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post">
                     {{ comment_form | crispy }}
-                  {% %}
+                    {% csrf_token %}
+                    <button type="submit">Submit</button>
                 </form>
+
+                {% endif %}
             </div>
         </div>
     </div>
