@@ -57,6 +57,7 @@ class Post(models.Model):
     release_date = models.CharField(max_length=20)
     platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
     created_on = models.DateTimeField(auto_now_add=True)
+    # slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -64,21 +65,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-
-# class Comment(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE,
-#                              related_name="comments")
-#     name = models.CharField(max_length=80)
-#     email = models.EmailField()
-#     body = models.TextField()
-#     created_on = models.DateTimeField(auto_now_add=True)
-#     approved = models.BooleanField(default=False)
-#     likes = models.ManyToManyField(
-#         User, related_name='blogpost_like', blank=True)
-
-#     class Meta:
-#         ordering = ["created_on"]
-
-#     def __str__(self):
-#         return f"Comment {self.body} by {self.name}"

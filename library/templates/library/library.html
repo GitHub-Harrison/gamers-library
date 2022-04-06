@@ -27,7 +27,7 @@ Gamers Library | Library
                 {% for post in page.object_list %}
                 <tr>
                     <td>
-                        <a href="#">
+                        <a href="{% url 'add_game' %}">
                             {{ post.title }}
                         </a>
                     </td>
