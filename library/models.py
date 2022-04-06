@@ -52,12 +52,12 @@ class Post(models.Model):
     title = models.CharField(max_length=180, unique=True)
     image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_post')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_post', null=True)
     genre = models.CharField(max_length=80, choices=GENRES, default=SHOOTER)
     release_date = models.CharField(max_length=20)
     platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
     created_on = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
 
     class Meta:
         ordering = ['-created_on']
