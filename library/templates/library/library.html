@@ -27,7 +27,9 @@ Gamers Library | Library
                 {% for post in page.object_list %}
                 <tr>
                     <td>
-                        {{ post.title }}
+                        <a href="#">
+                            {{ post.title }}
+                        </a>
                     </td>
                     <td>
                         <!-- if statement to show uploaded image or default placeholder image -->
