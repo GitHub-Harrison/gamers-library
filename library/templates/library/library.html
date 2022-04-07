@@ -23,16 +23,14 @@ Gamers Library | Library
                 </tr>
             </thead>
             <tbody>
-                <!-- for loop to show all game posts added to the database -->
                 {% for post in page.object_list %}
                 <tr>
                     <td>
-                        <a href="{% url 'post_detail' %}">
+                        <a href="{{ post.get_absolute_url }}">
                             {{ post.title }}
                         </a>
                     </td>
                     <td>
-                        <!-- if statement to show uploaded image or default placeholder image -->
                         {% if "placeholder" in post.image.url %}
                         <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-50">
                         {% else %}
@@ -49,7 +47,6 @@ Gamers Library | Library
         </table>
     </div>
 
-    <!-- previous/next page add more styling -->
 
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
