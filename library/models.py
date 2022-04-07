@@ -62,7 +62,7 @@ class Post(models.Model):
     platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    slug = models.SlugField(max_length=200, unique=True, null=False)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
 
     class Meta:
         ordering = ['-created_on']
