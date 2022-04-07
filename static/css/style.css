@@ -138,3 +138,10 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+/* post detail page styling */
+
+.pd-img {
+    height: 25%;
+    width: auto;
+}
