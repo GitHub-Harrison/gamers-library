@@ -41,7 +41,7 @@ def post_detail(request, slug):
     comments = post.comments.filter(active=True)
     new_comment = None
     template = 'library/post_detail.html'
-    
+
     # Comment posted
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
@@ -56,7 +56,7 @@ def post_detail(request, slug):
 
     else:
         comment_form = CommentForm()
-        
+
     context = {
         'post': post,
         'comments': comments,
