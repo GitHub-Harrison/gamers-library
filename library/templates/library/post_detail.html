@@ -27,4 +27,50 @@
         </div>
     </div>
 
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+                    <p>{{ post.author }} | {{ post.created_on }}</p>
+                    <p>{{ post.content | safe }}</p>
+                </div>
+            </div>
+        <div>
+        <div>
+            <!-- comments -->
+            <h2>{{ comments.count }} comments</h2>
+
+            {% for comment in comments %}
+            <div>
+                <p>
+                    {{ comment.name }}
+                    <span>
+                        {{ comment.created_on }}
+                    </span>
+                </p>
+                {{ comment.body | linebreaks }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <div>
+            {% if new_comment %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting moderation
+                </div>
+            {% else %}
+                <h3>Leave a comment</h3>
+                <form method="post">
+                    {{ comment_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit">Submit</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+
+
 {% endblock content %}
