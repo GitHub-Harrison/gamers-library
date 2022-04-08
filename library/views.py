@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.core.paginator import Paginator
 from .models import Post
+from .forms import CommentForm
 
 
 def library(response):
@@ -21,14 +22,44 @@ def library(response):
     return render(response, template, context)
 
 
-class PostDetail(View):
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+# class PostDetail(View):
+#     def get(self, request, slug, *args, **kwargs):
+#         queryset = Post.objects.filter(status=1)
+#         post = get_object_or_404(queryset, slug=slug)
 
-        template = 'library/post_detail.html'
-        context = {
-            'post': post,
-        }
+#         template = 'library/post_detail.html'
+#         context = {
+#             'post': post,
+#         }
 
-        return render(request, template, context)
+#         return render(request, template, context)
+
+
+def post_detail(request, slug):
+
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.filter(active=True)
+    new_comment = None
+    template = 'library/post_detail.html'
+    context = {
+        'post': post,
+        'comments': comments,
+        'new_comment': new_comment,
+        'comment_form': comment_form
+    }
+    # Comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+
+            # Create Comment object
+            new_comment = comment_form.save(commit=False)
+            # Assign current post to comment
+            new_comment.post = post
+            # Save comment to database
+            new_comment.save()
+
+    else:
+        comment_form = CommentForm()
+
+    return render(request, template, context)
