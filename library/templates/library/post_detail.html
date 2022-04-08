@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -63,10 +64,10 @@
                 </div>
             {% else %}
                 <h3>Leave a comment</h3>
-                <form method="post">
-                    {{ comment_form.as_p }}
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
                 </form>
             {% endif %}
         </div>
