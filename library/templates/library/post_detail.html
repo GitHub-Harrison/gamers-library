@@ -6,24 +6,20 @@
 
     <div>
         <div>
+            <h1>{{ post.title }}</h1>
+        </div>
+        <hr>
+        <div>
             <div>
-                <h1>{{ post.title }}</h1>
+                {% if "placeholder" in post.image.url %}
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-10 pd-img">
+                {% else %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-10 pd-img">
+                {% endif %}
             </div>
             <hr>
-            <div>
-                <div>
-                    <div>
-                        {% if "placeholder" in post.image.url %}
-                            <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-10 pd-img">
-                        {% else %}
-                            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-10 pd-img">
-                        {% endif %}
-                    </div>
-                    <hr>
-                    <div >
-                        <h4>{{ post.description }}</h4>
-                    </div>
-                </div>
+            <div >
+                <h4>{{ post.description }}</h4>
             </div>
         </div>
     </div>
