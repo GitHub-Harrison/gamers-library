@@ -30,7 +30,8 @@
             <div>
                 <div>
                     <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-                    <p>{{ post.author }} | {{ post.created_on }}</p>
+                    <p>{{ post.created_on }}</p>
+                    <p>{{ post.user }}</p>
                     <p>{{ post.content | safe }}</p>
                 </div>
             </div>
@@ -42,7 +43,7 @@
             {% for comment in comments %}
             <div>
                 <p>
-                    {{ comment.name }}
+                    <strong>{{ comment.name }}</strong>
                     <span>
                         {{ comment.created_on }}
                     </span>
