@@ -40,16 +40,25 @@ Before I started any of the coding I first created some wireframes for how I env
 ## Features
 
 * Navigation Bar
+    * Simple navigation bar to help users traverse the pages.
 * Welcome Text
+    * Small amount of welcome text along with a 'How it works' section to ensure users understand the concept of the website and it's goal.
 * Image Carousel
+    * Carousel found on the home page which shows the last 3-5 added games to the library.
 * Table of Library Contents
+    * A table full of all added games to the database which users can look through, when the game title is clicked the user will be taken to a new page with the same details as the library but with an additional area for comments to be made.
 * Number of Items
-* Page Number
+    * At the top of the library page there is a bit of text with the number of items currently in the library.
 * Pagination
+    * The library page is the only page to have any pagination, within this pagination is the page number to help the user keep track of what pages the games they like were found on. The reason for paginating this page is to prevent the user from being overwhelmed with information.
 * Add Game Form
+    * Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website if they aren't already in the library.
 * Login
+    * A simple login page for users to access their accounts and redirects to the home page.
 * Register
+    * A simple register page for users to create their accounts and redirects to the home page.
 * Logout
+    * A simple logout screen that allows the user to logout of their account and redirects to the home page.
 
 ## Data Model ?
 
