@@ -151,3 +151,28 @@ footer {
     height: 25%;
     width: auto;
 }
+
+.pd-description {
+    margin-left: 5%;
+}
+
+/* comment styling */
+
+#comment-section {
+    margin-left: 25%;
+    padding: 2%;
+    width: 50%;
+}
+
+.comment {
+    border: 1px rgb(158, 158, 158) solid;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#new-comment {
+    width: 50%;
+    margin-left: 25%;
+    padding: 2%;
+}
