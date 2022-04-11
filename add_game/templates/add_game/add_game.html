@@ -5,11 +5,12 @@ Gamers Library | Add Games
 {% endblock %}
 
 {% block content %}
-    <h1>Add a Game</h1>
 
     <!-- form to add game post to database -->
     <div class="form-center">
-        <form method="POST">
+        <form id="add-game-form" method="POST">
+            <h3 class="form-center">Add a Game</h3>
+            <hr>
             {% csrf_token %}
             <label class="pad" for="id_title">Game Title:</label> <br> 
             {{ form.title }} <br>
