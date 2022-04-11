@@ -12,26 +12,26 @@
         <div>
             <div>
                 {% if "placeholder" in post.image.url %}
-                    <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-10 pd-img">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-30 pd-img">
                 {% else %}
-                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-10 pd-img">
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-30 pd-img">
                 {% endif %}
             </div>
-            <hr>
             <div >
-                <h4>{{ post.description }}</h4>
+                <h4 class="pd-description">{{ post.description }}</h4>
             </div>
         </div>
+        <hr>
     </div>
 
 
     <div>
-        <div>
+        <div id="comment-section">
             <!-- comments -->
             <h2>{{ comments.count }} comments</h2>
 
             {% for comment in comments %}
-            <div>
+            <div class="comment">
                 <p>
                     <strong>{{ comment.name }}</strong>
                     <span>
@@ -42,16 +42,18 @@
             </div>
             {% endfor %}
         </div>
+        <hr>
     </div>
     <div>
-        <div>
+        <div id="new-comment">
             {% if new_comment %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting moderation
                 </div>
             {% else %}
-                <h3>Leave a comment</h3>
+                
                 <form method="post" style="margin-top: 1.3em;">
+                    <h3>Leave a comment</h3>
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
