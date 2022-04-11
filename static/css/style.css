@@ -78,10 +78,14 @@ tr:hover {
 
 form {
     background-color: beige;
-    padding: 15px;
+    padding: 20px;
     margin: 15px;
     border-radius: 25px;
     box-shadow: 3px 3px 3px 3px black;
+}
+
+#add-game-form {
+    margin-top: 50px;
 }
 
 .pad {
