@@ -27,16 +27,6 @@
 
     <div>
         <div>
-            <div>
-                <div>
-                    <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-                    <p>{{ post.created_on }}</p>
-                    <p>{{ post.user }}</p>
-                    <p>{{ post.content | safe }}</p>
-                </div>
-            </div>
-        <div>
-        <div>
             <!-- comments -->
             <h2>{{ comments.count }} comments</h2>
 
