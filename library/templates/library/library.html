@@ -23,7 +23,8 @@ Gamers Library | Library
                 </tr>
             </thead>
             <tbody>
-                {% for post in page.object_list %}
+                <!-- {% for post in page.object_list %} -->
+                {% if post.approved %}
                 <tr>
                     <td>
                         <a href="{{ post.get_absolute_url }}">
@@ -42,7 +43,8 @@ Gamers Library | Library
                     <td>{{ post.platform }}</td>
                     <td>{{ post.release_date }}</td>
                 </tr>
-                {% endfor %}
+                {% endif %}
+                <!-- {% endfor %} -->
             </tbody>
         </table>
     </div>
