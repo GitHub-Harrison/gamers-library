@@ -7,7 +7,7 @@ from .forms import CommentForm
 
 
 def library(response):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(approved=True)
 
     post_paginator = Paginator(posts, 3)
     page_num = response.GET.get('page')
