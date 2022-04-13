@@ -12,9 +12,9 @@
         <div>
             <div>
                 {% if "placeholder" in post.image.url %}
-                    <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-30 pd-img">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-20 pd-img">
                 {% else %}
-                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-30 pd-img">
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-20 pd-img">
                 {% endif %}
             </div>
             <div >
