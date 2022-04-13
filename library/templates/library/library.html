@@ -35,7 +35,7 @@ Gamers Library | Library
                         {% if "placeholder" in post.image.url %}
                         <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="w-50">
                         {% else %}
-                        <img src="{{ post.image.url }}" alt="" class="w-50">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-50">
                         {% endif %}
                     </td>
                     <td>{{ post.description }}</td>
