@@ -147,12 +147,16 @@ footer {
 /* post detail page styling */
 
 .pd-img {
-    height: 25%;
-    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 15px;
 }
 
 .pd-description {
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 /* comment styling */
