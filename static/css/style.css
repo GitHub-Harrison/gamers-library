@@ -51,7 +51,7 @@ th {
 }
 
 .th-2 {
-    width: 23%;
+    width: 20%;
 }
 
 .th-3 {
@@ -59,8 +59,7 @@ th {
 }
 
 td {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 20px;
     border: 1px solid black;
 }
 
