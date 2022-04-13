@@ -52,7 +52,13 @@ The login page will look similar to every other login page with an option for th
 * Pagination
     * The library page is the only page to have any pagination, within this pagination is the page number to help the user keep track of what pages the games they like were found on. The reason for paginating this page is to prevent the user from being overwhelmed with information.
 * Add Game Form
-    * Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website if they aren't already in the library.
+    * Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website.
+    * All posts will need to be approved by an admin before they show on the library page.
+* Post Detail
+    * A page that is created for each game in the library for users to leave comments.
+    * This page also will have the post image and description.
+* Comments
+    * Comments on the post detail will have to be approved by admins to ensure the environment stays positive and healthy.
 * Login
     * A simple login page for users to access their accounts and redirects to the home page.
 * Register
