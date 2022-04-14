@@ -66,9 +66,17 @@ The login page will look similar to every other login page with an option for th
 * Logout
     * A simple logout screen that allows the user to logout of their account and redirects to the home page.
 
-## Data Model ?
-
 ## Technologies Used
+During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
+* [Python](https://wiki.python.org/moin/FrontPage) - This was used for to create the entire project.
+* [HTML](https://en.wikipedia.org/wiki/HTML) - I used HTML language to create the base/structure of the project.
+* [CSS](https://en.wikipedia.org/wiki/CSS) - I used CSS language to style the overall website except for code taken from [Bootstrap](https://getbootstrap.com/).
+* [Bootstrap](https://getbootstrap.com/) - I used bootstrap to import code and speed up the development process.
+* [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in one place.
+* [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
+* [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
+* [Git](https://git-scm.com/) - Git is a free and open source version control system which I used for version control.
+* [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final test video for the project.
 
 ## Testing - TESTING.md file >?
 Video testing.
