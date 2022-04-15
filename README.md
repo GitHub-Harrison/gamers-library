@@ -79,6 +79,7 @@ During this project I used multiple different technologies to help bring my idea
 * [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final test video for the project.
 
 ## Testing - TESTING.md file >?
+All testing has been done and documented in the [TESTING.md](TESTING.md) file. This includes the PEP8 Validator.
 Video testing.
 Bugs.
 Validators.
