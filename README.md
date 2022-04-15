@@ -8,7 +8,7 @@ One of the first things I did after deciding on what my project was to be able w
 * As a Site User I can suggest a new game to be added so that I can share my favourite games with others.
 * As a Site User I can view the games in the library so that I can find new games to play.
 * As a Site User I can create an account so that I can interact with the site.
-* As a User I can go to the next page so that I am not overwhelmed by content.
+* As a Site User I can go to the next page so that I am not overwhelmed by content.
 * As a Site User I can comment on games so that share my experience with that game to others.
 * As a Site User I can like/unlike games so that I can interact with the content.
 * As a Site User I can search using a filter so that I can find games similar to what I enjoy already.
@@ -85,5 +85,131 @@ Validators.
 Browser Compatibility.
 
 ## Deployment
+This project was deployed using Heroku.
+* Steps for deployment:
+    * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
+    * Once logged into Heroku go to the dashboard.
+    * Click on 'New' -> 'Create New App'.
+    * Enter the app name and choose a region (for me this was gamers-library and Europe).
+    * Click 'Create app'
+    * Navigate to the Resources Tab, Add-ons, search and add 'Heroku Postgres'.
+    * Navigate to the Settings Tab, click reveal Config Vars and copy the database url value.
+    * In gitpod create a new env.py file.
+    * Within the env.py file, import os.
+    * Set environment variables for database url and add a secret key.
+    * Go back to Heroku and add the Secret Key to the Config Vars.
+    * Go back to gitpod to prepare our environment and settings.py file.
+    * In settings.py Reference env.py i.e 
+        ```
+        from pathlib import Path
+        import os
+        import dj_database_url
+
+        if os.path.isfile("env.py"):
+            import env
+    * Remove the default insecure Secret Key and replace with your own (links to the SECRET_KEY variable on Heroku)
+        ```
+        SECRET_KEY = os.environ.get('SECRET_KEY')
+    * Comment out the old DataBases Section
+    * Add new DATABASES Section (links to the DATABASE_URL variable on Heroku)
+        ```
+        DATABASES = {
+            'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
+    * Save all files
+    * Move to the Terminal and migrate changes
+        ```
+        python3 manage.py migrate
+    * Navigate to the [Cloudinary](https://cloudinary.com/) website.
+    * Create an account or login if you already have an account.
+    * Navigate to the dashboard while on Cloudinary.
+    * Find the 'API Environment variable'.
+    * Copy the 'API Environment variable'.
+    * Return to the env.py file.
+    * Add Cloudinary URL to env.py file (be sure to paste in the correct section of the link)
+        ```
+        os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
+    * Return to Heroku.
+    * Navigate back to the Config Vars.
+    * Add Cloudinary URL to the Config Vars.
+        ```
+        CLOUDINARY_URL : cloudinary://************************
+    * Add DISABLE_COLLECTSTATIC to Config Vars (temporary step for the moment, will be removed before final deployment)
+        ```
+        DISABLE_COLLECTSTATIC : 1
+    * Return to gitpod
+    * In settings.py Add Cloudinary Libraries to installed apps.
+        ```
+        INSTALLED_APPS = [
+            …,
+            'cloudinary_storage',
+            'django.contrib.staticfiles',
+            'cloudinary',
+            …,
+        ]
+        (note: order is important)
+    * Tell Django to use Cloudinary to store media and static files (place under the Static files)
+        ```
+        STATIC_URL = '/static/'
+
+        STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+        MEDIA_URL = '/media/'
+        DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    * Link file to the templates directory in Heroku (place under the BASE_DIR line)
+        ```
+        TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+    * Change the templates directory to TEMPLATES_DIR (place within the TEMPLATES array)
+        ```
+        TEMPLATES = [
+            {
+                ...,
+                'DIRS': [TEMPLATES_DIR],
+                ...,
+                    ],
+                },
+            },
+        ]
+    * Add Heroku Hostname to ALLOWED_HOSTS
+        ```
+        ALLOWED_HOSTS = ["PROJECT_NAME.herokuapp.com", "localhost"]
+    * In gitpod Create 3 new folders: media, static, templates
+    * Create procfile on the top level directory: Procfile
+    * In Procfile add:
+        ```
+        web: gunicorn PROJECT_NAME.wsgi
+    * Save all files
+    * In the Terminal:
+        * Add : 
+            ```
+            git add .
+        * Commit :
+            ```
+            git commit -m "Deployment Commit"
+        * Push : 
+            ```
+            git push
+    * Return to Heroku
+    * Now return to the 'Deploy' page and find the 'Deployment method' section
+    * Select 'GitHub' this should prompt you to login to your GitHub account
+    * Once connected it will ask for a repository to connect to
+    * Simply search the repository name, the repositroy should appear below
+    * Click 'Connect'
+    * From here you can choose either 'Manual deploy' or 'Automatic deploys'
+    * To access the deployed link simply click the 'Open app' button located at the top right of your app page.
+
+## Local Deployment
+To make a local copy of this project, you can clone it by typing in your IDE terminal:
+- `git clone https://github.com/GitHub-Harrison/gamers-library.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/GitHub-Harrison/gamers-library)
+    
+
+
+
 
 ## Credits
