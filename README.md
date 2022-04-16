@@ -23,19 +23,19 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ### Home page
 * For the home page I've gone with a relatively empty idea to prevent the user from being overwhelmed with information.
-* ![Home Page Wireframe](documentation/wireframes/home-wireframe.png)
+ ![Home Page Wireframe](documentation/wireframes/home-wireframe.png)
 
 ### Library page
 * For the library page I'm aiming to create a page that shows only a few game posts with pagination to help prevent an overload of information.
-* ![Library Page Wireframe](documentation/wireframes/library-wireframe.png)
+ ![Library Page Wireframe](documentation/wireframes/library-wireframe.png)
 
 ### Add game page
 * The add game page is going to consist of a simple form that only shows once the user has logged in.
-* ![Add Game Wireframe](documentation/wireframes/add-game-wireframe.png)
+ ![Add Game Wireframe](documentation/wireframes/add-game-wireframe.png)
 
 ### Login page
 * The login page will look similar to every other login page with an option for those without an account to register.
-* ![Login Wireframe](documentation/wireframes/login-wireframe.png)
+ ![Login Wireframe](documentation/wireframes/login-wireframe.png)
 
 ## Features
 
