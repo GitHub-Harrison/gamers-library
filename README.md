@@ -208,9 +208,22 @@ To make a local copy of this project, you can clone it by typing in your IDE ter
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/GitHub-Harrison/gamers-library)
-    
-
-
-
 
 ## Credits
+
+### Code Related Sources
+Below are the sources that helped me develop my project as well as understanding the code I was writing and to help solve bugs/problems I encountered throughout the development.
+| Source | Purpose |
+| --- | --- |
+| [StackOverflow](https://stackoverflow.com/questions/427102/what-is-a-slug-in-django) | Understanding 'slug' |
+| [StackOverflow](https://stackoverflow.com/questions/18676156/how-to-properly-use-the-choices-field-option-in-django) | Choices Field |
+| [StackOverflow](https://stackoverflow.com/questions/38388423/what-does-on-delete-do-on-django-models) | Understanding on_delete |
+| [StackOverflow](https://stackoverflow.com/questions/2642613/what-is-related-name-used-for) | Understand related_name |
+| [Django Documentation](https://docs.djangoproject.com/en/4.0/ref/models/options/) | Model Meta options |
+| [Django Documentation](https://docs.djangoproject.com/en/4.0/ref/models/fields/#primary-key) | Model field reference |
+| [Django Documentation](https://docs.djangoproject.com/en/4.0/topics/pagination/) | Pagination |
+| [Grepper](https://www.codegrepper.com/code-examples/shell/how+to+recover+deleted+files+from+gitpod) | File Recovery |
+| [Python Circle](https://pythoncircle.com/post/424/solving-django-error-noreversematch-at-url-with-arguments-and-keyword-arguments-not-found/) | Understanding 'NoReverseMatch at' |
+
+
+### Content Related Sources
