@@ -39,32 +39,71 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ## Features
 
-* Navigation Bar
-    * Simple navigation bar to help users traverse the pages.
-* Welcome Text
-    * Small amount of welcome text along with a 'How it works' section to ensure users understand the concept of the website and it's goal.
-* Image Carousel
-    * Carousel found on the home page which shows the last 3-5 added games to the library.
-* Table of Library Contents
-    * A table full of all added games to the database which users can look through, when the game title is clicked the user will be taken to a new page with the same details as the library but with an additional area for comments to be made.
-* Number of Items
-    * At the top of the library page there is a bit of text with the number of items currently in the library.
-* Pagination
-    * The library page is the only page to have any pagination, within this pagination is the page number to help the user keep track of what pages the games they like were found on. The reason for paginating this page is to prevent the user from being overwhelmed with information.
-* Add Game Form
-    * Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website.
-    * All posts will need to be approved by an admin before they show on the library page.
-* Post Detail
-    * A page that is created for each game in the library for users to leave comments.
-    * This page also will have the post image and description.
-* Comments
-    * Comments on the post detail will have to be approved by admins to ensure the environment stays positive and healthy.
-* Login
-    * A simple login page for users to access their accounts and redirects to the home page.
-* Register
-    * A simple register page for users to create their accounts and redirects to the home page.
-* Logout
-    * A simple logout screen that allows the user to logout of their account and redirects to the home page.
+### Navigation Bar
+* Simple navigation bar to help users traverse the pages.
+
+![Navigation Bar](documentation/readme/features/nav.png)
+
+### Welcome Text
+* Small amount of welcome text along with a 'How it works' section to ensure users understand the concept of the website and it's goal.
+
+![Welcome Text](documentation/readme/features/welcome-text.png)
+
+### Image Carousel
+* Carousel found on the home page which shows the last 3-5 added games to the library.
+
+![Image Carousel](documentation/readme/features/img-caro-draft.png)
+
+### Table of Library Contents
+* A table full of all added games to the database which users can look through, when the game title is clicked the user will be taken to a new page with the same details as the library but with an additional area for comments to be made.
+
+![Library Table](documentation/readme/features/library-contents.png)
+
+### Number of Items
+* At the top of the library page there is a bit of text with the number of items currently in the library.
+
+![Number of Items](documentation/readme/features/num-games.png)
+
+### Pagination
+* The library page is the only page to have any pagination, within this pagination is the page number to help the user keep track of what pages the games they like were found on. The reason for paginating this page is to prevent the user from being overwhelmed with information.
+
+![Pagination](documentation/readme/features/pagination-1.png)
+![Pagination](documentation/readme/features/pagination-2.png)
+
+### Add Game Form
+* Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website.
+* All posts will need to be approved by an admin before they show on the library page.
+
+![Add Game Form](documentation/readme/features/add-game.png)
+
+### Post Detail
+* This page is broken down into 3 sections: Post details, Comments, Leave a comment.
+* A page that is created for each game in the library for users to leave comments.
+* This page also will have the post image and description.
+
+![Post Detail](documentation/readme/features/post-detail-1.png)
+![Post Detail Comments](documentation/readme/features/post-detail-2.png)
+![Post Detail Leave Comment](documentation/readme/features/post-detail-3.png)
+
+### Comments
+* Comments on the post detail will have to be approved by admins to ensure the environment stays positive and healthy.
+
+![Comments](documentation/readme/features/comments.png)
+
+### Login
+* A simple login page for users to access their accounts and redirects to the home page.
+
+![Login](documentation/readme/features/login.png)
+
+### Register
+* A simple register page for users to create their accounts and redirects to the home page.
+
+![Register](documentation/readme/features/register.png)
+
+### Logout
+* A simple logout screen that allows the user to logout of their account and redirects to the home page.
+
+![Logout](documentation/readme/features/logout.png)
 
 ## Technologies Used
 During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
