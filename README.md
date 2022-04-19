@@ -257,4 +257,4 @@ Below are the sources that helped me develop my project as well as understanding
 
 
 ### Content Related Sources
-This website features materials protected by the Fair Use guidelines of [Section 107 of the Copyright Act](https://www.copyright.gov/title17/92chap1.html#107). All rights reserved to the copyright owners.
+This website features materials protected by the Fair Use guidelines of the Copyright Act. All rights reserved to the copyright owners.
