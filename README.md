@@ -95,7 +95,8 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ## Technologies Used
 During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
-* [Python](https://wiki.python.org/moin/FrontPage) - This was used for to create the entire project.
+* [Python](https://wiki.python.org/moin/FrontPage) - This language was used for the back end development.
+* [Django](https://www.djangoproject.com/) - This was the Python framework I used to help create my project.
 * [HTML](https://en.wikipedia.org/wiki/HTML) - I used HTML language to create the base/structure of the project.
 * [CSS](https://en.wikipedia.org/wiki/CSS) - I used CSS language to style the overall website except for code taken from [Bootstrap](https://getbootstrap.com/).
 * [Bootstrap](https://getbootstrap.com/) - I used bootstrap to import code and speed up the development process.
