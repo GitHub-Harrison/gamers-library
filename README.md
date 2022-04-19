@@ -61,8 +61,10 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ### Pagination
 * The library page is the only page to have any pagination, within this pagination is the page number to help the user keep track of what pages the games they like were found on. The reason for paginating this page is to prevent the user from being overwhelmed with information.
-![Pagination](documentation/readme/features/pagination-1.png)
-![Pagination](documentation/readme/features/pagination-2.png)
+
+    ![Pagination](documentation/readme/features/pagination-1.png)
+
+    ![Pagination](documentation/readme/features/pagination-2.png)
 
 ### Add Game Form
 * Add game form which is only visible to users who have logged into an account, this allows the registered users to add their favourite games to the website.
