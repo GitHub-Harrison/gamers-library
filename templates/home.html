@@ -55,9 +55,9 @@ Gamers Library | Home
                             {% if post.approved %}
                                 <div class="carousel-item {% if forloop.first %}active{% endif%}">
                                     {% if 'placeholder' in post.image.url  %}
-                                        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.jennybeaumont.com%2Fwp-content%2Fuploads%2F2015%2F03%2Fplaceholder.gif&f=1&nofb=1" class="d-block w-100" alt="placeholder image">
+                                        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.jennybeaumont.com%2Fwp-content%2Fuploads%2F2015%2F03%2Fplaceholder.gif&f=1&nofb=1" class="d-block w-100 img-h" alt="placeholder image">
                                     {% else %}
-                                        <img src="{{ post.image.url}}" class="d-block w-100" alt="{{ post.title }}">
+                                        <img src="{{ post.image.url}}" class="d-block w-100 img-h" alt="{{ post.title }}">
                                     {% endif %}
                                 </div>
                             {% endif %}   
