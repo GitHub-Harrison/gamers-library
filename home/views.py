@@ -5,7 +5,11 @@ from library.models import Post
 
 
 def home(response):
-    return render(response, './home.html')
+    posts = Post.objects.all()
+    context = {
+        'posts': posts,
+    }
+    return render(response, './home.html', context)
 
 
 # def home(response):
