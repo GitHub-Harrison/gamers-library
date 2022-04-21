@@ -255,6 +255,5 @@ Below are the sources that helped me develop my project as well as understanding
 | [Grepper](https://www.codegrepper.com/code-examples/shell/how+to+recover+deleted+files+from+gitpod) | File Recovery |
 | [Python Circle](https://pythoncircle.com/post/424/solving-django-error-noreversematch-at-url-with-arguments-and-keyword-arguments-not-found/) | Understanding 'NoReverseMatch at' |
 
-
 ### Content Related Sources
 This website features materials protected by the Fair Use guidelines of the Copyright Act. All rights reserved to the copyright owners.
