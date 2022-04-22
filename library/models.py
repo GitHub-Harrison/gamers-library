@@ -4,11 +4,9 @@ from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
-    # tidy the below - genres/platform
     SHOOTER = 'Shooter'
     ACTION_ADV = 'Action adventure'
     MOBA = 'MOBA'
@@ -56,18 +54,16 @@ class Post(models.Model):
     title = models.CharField(max_length=180, unique=True)
     image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_post', null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_post')
     genre = models.CharField(max_length=80, choices=GENRES, default=SHOOTER)
     release_date = models.CharField(max_length=20)
     platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    slug = models.SlugField(max_length=200, unique=True, null=True)
+    slug = models.SlugField(max_length=200, unique=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-created_on']
-        # alphabetical instead?
 
     def __str__(self):
         return self.title
