@@ -4,6 +4,8 @@ from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
 
+
+
 class Post(models.Model):
     SHOOTER = 'Shooter'
     ACTION_ADV = 'Action adventure'
