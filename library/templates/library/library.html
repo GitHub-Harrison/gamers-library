@@ -6,9 +6,9 @@ Gamers Library | Library
 {% endblock %}
 
 {% block content %}
+    <h1>Library Page</h1>
+    <br>
     <div class="col-md-8 center">
-        <h1 class="text-center">Game Library</h1>
-        <br>
         <h2>Total Number of Games: {{ count }}</h2>
         <br>
         <table>
@@ -23,6 +23,7 @@ Gamers Library | Library
                 </tr>
             </thead>
             <tbody>
+                <!-- {% for post in page.object_list %} -->
                 {% if post.approved %}
                 <tr>
                     <td>
@@ -43,6 +44,7 @@ Gamers Library | Library
                     <td>{{ post.release_date }}</td>
                 </tr>
                 {% endif %}
+                <!-- {% endfor %} -->
             </tbody>
         </table>
     </div>
