@@ -41,6 +41,9 @@ I have manually tested this project by doing the following:
 * Testing the user can post comments on each games detail page
 * Testing the admins can approve both games and comments
 
+I also created a few tests within the project to help automate some of the process.
+![Django Tests](documentation/testing/django-tests.png)
+
 Below is a video from both the Admins and Users point of view.
 
 ## Final Testing Videos
