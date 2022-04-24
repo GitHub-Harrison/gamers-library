@@ -108,12 +108,13 @@ During this project I used multiple different technologies to help bring my idea
 * [Git](https://git-scm.com/) - Git is a free and open source version control system which I used for version control.
 * [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final test video for the project.
 
-## Testing - TESTING.md file >?
-All testing has been done and documented in the [TESTING.md](TESTING.md) file. This includes the PEP8 Validator.
-Video testing.
-Bugs.
-Validators.
-Browser Compatibility.
+## Testing
+All testing has been done and documented in the [TESTING.md](TESTING.md) file. 
+This includes: 
+* Video testing.
+* Bugs.
+* Validators.
+* Browser Compatibility.
 
 ## Deployment
 This project was deployed using Heroku.
