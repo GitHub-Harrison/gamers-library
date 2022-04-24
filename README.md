@@ -154,7 +154,7 @@ This project was deployed using Heroku.
     * Run server to test
         ```
         python3 manage.py runserver
-    * Now we're ready to deploy navigate to the [Heroku](https://dashboard.heroku.com/) site
+    * Now we're ready to deploy navigate to the Heroku site
     * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
     * Once logged into Heroku go to the dashboard.
     * Click on 'New' -> 'Create New App'.
