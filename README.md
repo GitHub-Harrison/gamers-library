@@ -119,40 +119,40 @@ Browser Compatibility.
 This project was deployed using Heroku.
 * Steps for deployment:
     * Firstly, in Gitpod:
-        * Install Django and gunicorn
-            ```
-            pip3 install Django==3.2 gunicorn
-        * Install supporting libraries
-            ```
-            pip3 install dj_database_url psycopg2
-        * Install Cloudinary Libraries
-            ``` 
-            pip3 install dj3-cloudinary-storage
-        * Create requirements file
-            ```
-            pip3 freeze --local > requirements.txt
-        * Create the Project
-            ```
-            django-admin startproject PROJ_NAME .
-        * Create App
-            ```
-            python3 manage.py startapp APP_NAME
-        * Navigate to the settings.py
-        * Add to installed apps
-            ```
-            INSTALLED_APPS = [
-                ...
-                'APP_NAME',
-            ]
-        * Save file
-        * In the terminal:
-        * Migrate changes
-             ```
-            python3 manage.py makemigrations
-            python3 manage.py migrate
-        * Run server to test
-            ```
-            python3 manage.py runserver
+    * Install Django and gunicorn
+         ```
+        pip3 install Django==3.2 gunicorn
+    * Install supporting libraries
+        ```
+        pip3 install dj_database_url psycopg2
+    * Install Cloudinary Libraries
+        ``` 
+        pip3 install dj3-cloudinary-storage
+    * Create requirements file
+        ```
+        pip3 freeze --local > requirements.txt
+    * Create the Project
+        ```
+        django-admin startproject PROJ_NAME .
+    * Create App
+        ```
+        python3 manage.py startapp APP_NAME
+    * Navigate to the settings.py
+    * Add to installed apps
+        ```
+        INSTALLED_APPS = [
+            ...
+            'APP_NAME',
+        ]
+    * Save file
+    * In the terminal:
+    * Migrate changes
+        ```
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+    * Run server to test
+        ```
+        python3 manage.py runserver
     * Now we're ready to deploy navigate to the [Heroku](https://dashboard.heroku.com/) site
     * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
     * Once logged into Heroku go to the dashboard.
