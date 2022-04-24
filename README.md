@@ -118,6 +118,42 @@ Browser Compatibility.
 ## Deployment
 This project was deployed using Heroku.
 * Steps for deployment:
+    * Firstly, in Gitpod:
+        * Install Django and gunicorn
+            ```
+            pip3 install Django==3.2 gunicorn
+        * Install supporting libraries
+            ```
+            pip3 install dj_database_url psycopg2
+        * Install Cloudinary Libraries
+            ``` 
+            pip3 install dj3-cloudinary-storage
+        * Create requirements file
+            ```
+            pip3 freeze --local > requirements.txt
+        * Create the Project
+            ```
+            django-admin startproject PROJ_NAME .
+        * Create App
+            ```
+            python3 manage.py startapp APP_NAME
+        * Navigate to the settings.py
+        * Add to installed apps
+            ```
+            INSTALLED_APPS = [
+                ...
+                'APP_NAME',
+            ]
+        * Save file
+        * In the terminal:
+        * Migrate changes
+             ```
+            python3 manage.py makemigrations
+            python3 manage.py migrate
+        * Run server to test
+            ```
+            python3 manage.py runserver
+    * Now we're ready to deploy navigate to the [Heroku](https://dashboard.heroku.com/) site
     * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
     * Once logged into Heroku go to the dashboard.
     * Click on 'New' -> 'Create New App'.
@@ -150,6 +186,7 @@ This project was deployed using Heroku.
     * Save all files
     * Move to the Terminal and migrate changes
         ```
+        python3 manage.py makemigrations
         python3 manage.py migrate
     * Navigate to the [Cloudinary](https://cloudinary.com/) website.
     * Create an account or login if you already have an account.
@@ -168,6 +205,9 @@ This project was deployed using Heroku.
     * Add DISABLE_COLLECTSTATIC to Config Vars (temporary step for the moment, will be removed before final deployment)
         ```
         DISABLE_COLLECTSTATIC : 1
+    * Add SITE_NAME to Config Vars
+        ```
+        SITE_NAME : gamers-library.herokuapp.com
     * Return to gitpod
     * In settings.py Add Cloudinary Libraries to installed apps.
         ```
@@ -205,7 +245,10 @@ This project was deployed using Heroku.
         ]
     * Add Heroku Hostname to ALLOWED_HOSTS
         ```
-        ALLOWED_HOSTS = ["PROJECT_NAME.herokuapp.com", "localhost"]
+        ALLOWED_HOSTS = []
+        host = os.environ.get('SITE_NAME')
+        if host:
+            ALLOWED_HOSTS.append(host)
     * In gitpod Create 3 new folders: media, static, templates
     * Create procfile on the top level directory: Procfile
     * In Procfile add:
@@ -235,6 +278,14 @@ This project was deployed using Heroku.
 To make a local copy of this project, you can clone it by typing in your IDE terminal:
 - `git clone https://github.com/GitHub-Harrison/gamers-library.git`
 
+You will also need to:
+* Create an [env.py](env_sample.py) (see for reference) file
+* Within the file add:
+    * The same Environment Variables
+    * The same Config Vars (like on Heroku)
+* You will also need to install the packages within the requirements.txt file
+    ```
+    pip3 install -r requirements.txt
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/GitHub-Harrison/gamers-library)
