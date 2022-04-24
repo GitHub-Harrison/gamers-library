@@ -3,7 +3,7 @@ from django.test import TestCase
 
 class UrlTest(TestCase):
 
-    def testLibraryPage(self):
+    def testAddGamePage(self):
         response = self.client.get('add_game/')
         print(response)
 
