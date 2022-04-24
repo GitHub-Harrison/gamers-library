@@ -49,7 +49,7 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ### Image Carousel
 * Carousel found on the home page which shows the last 3-5 added games to the library.
-![Image Carousel](documentation/readme/features/img-caro-draft.png)
+![Image Carousel](documentation/readme/features/img-caro.png)
 
 ### Table of Library Contents
 * A table full of all added games to the database which users can look through, when the game title is clicked the user will be taken to a new page with the same details as the library but with an additional area for comments to be made.
