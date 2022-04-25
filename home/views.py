@@ -10,9 +10,3 @@ def home(response):
         'posts': posts,
     }
     return render(response, './home.html', context)
-
-
-# def home(response):
-#     template = 'home/home.html'
-#     context = {}
-#     return render(response, template, context)

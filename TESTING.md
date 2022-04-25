@@ -64,5 +64,8 @@ While coding my project I have come across a few issues/bugs which I believe all
 * Currently there are no bugs that I am aware of.
 
 ## Validator Testing
+PEP8
+HTML 
+CSS
 
 ## Browser Compatibility
