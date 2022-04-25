@@ -64,8 +64,21 @@ While coding my project I have come across a few issues/bugs which I believe all
 * Currently there are no bugs that I am aware of.
 
 ## Validator Testing
-PEP8
-HTML 
-CSS
+
+* PEP8
+    * The only errors shown by the PEP8 Validator were relating to line too long as shown:
+    ![library Models](documentation/testing/library-models.png)
+    ![addgame Forms](documentation/testing/addgame-forms.png)
+
+    * The rest of the python files came back with no errors:
+    ![addgame Views](documentation/testing/addgame-views.png)
+    ![library Views](documentation/testing/library-views.png)
+    ![library Forms](documentation/testing/library-forms.png)
+    ![home Views](documentation/testing/home-views.png)
+
+HTML - to be done on the live site / security issues on heroku read docs on other deployment
+* CSS 
+    * The CSS file passed the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) with no errors:
+        ![CSS Validator](documentation/testing/css-validator.png)
 
 ## Browser Compatibility
