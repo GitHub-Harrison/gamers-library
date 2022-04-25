@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'library',
     'add_game',
+    'home',
 ]
 
 SITE_ID = 1
