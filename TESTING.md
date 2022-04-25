@@ -58,7 +58,11 @@ Below is a video from both the Admins and Users point of view.
 While coding my project I have come across a few issues/bugs which I believe all have been fixed. I took note of some of the bugs through the GitHub issue tab and have linked them below.
 
 ### Solved Bugs
-- Insert link to each issue with description
+* One bug I encountered was a Syntax Error which was fixed by adding `{% load static %}` to the top of the file. - **TemplateSyntaxError - Invalid block tag** Issue [#11](https://github.com/GitHub-Harrison/gamers-library/issues/11)
+* Another bug I came across was one regarding "Reverse for 'PostDetail' not found", this was fixed by making several changes within my library/views.py, library/models.py and library/urls.py files. - **Reverse for 'PostDetail' not found. 'PostDetail' is not a valid view function or pattern name** Issue [#13](https://github.com/GitHub-Harrison/gamers-library/issues/13)
+* The simpliest bug I encountered was a 404 Page not found, this was due to a 'status' field I had in the model which has since been removed. **Page not found - when clicking on a post from library.** Issue [14](https://github.com/GitHub-Harrison/gamers-library/issues/14)
+* One bug I had which has been resolved was regarding IntergrityError, I have no memory of what was changed to resolve this issue. **IntergrityError - null value in column "user_id" of relation "library_post" violates not-null constraint** Issue[15](https://github.com/GitHub-Harrison/gamers-library/issues/15)
+* The final bug I documented was regarding 'column library_post.user_id does not exist' I have not seen this issue since so I believe this issue to be fixed. **column library_post.user_id does not exist** Issue [#10](https://github.com/GitHub-Harrison/gamers-library/issues/10)
 
 ### Remaining Bugs
 * Currently there are no bugs that I am aware of.
