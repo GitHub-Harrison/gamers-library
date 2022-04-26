@@ -48,11 +48,11 @@ Below is a video from both the Admins and Users point of view.
 
 ## Final Testing Videos
 
-### [Users Point of View]()
-- insert screenshot with link to video
+## [Users Point of View](https://youtu.be/HkCbdaipWF0)
+[![YouTube](documentation/testing/admin-yt.png)](https://youtu.be/U_kbEO-b1B4)
 
-### [Admins Point of View]()
-- insert screenshot with link to video
+## [Admins Point of View]()
+[![YouTube](documentation/testing/user-yt.png)](https://youtu.be/U_kbEO-b1B4)
 
 ## Bugs
 While coding my project I have come across a few issues/bugs which I believe all have been fixed. I took note of some of the bugs through the GitHub issue tab and have linked them below.
@@ -80,7 +80,10 @@ While coding my project I have come across a few issues/bugs which I believe all
     ![library Forms](documentation/testing/library-forms.png)
     ![home Views](documentation/testing/home-views.png)
 
-HTML - to be done on the live site / security issues on heroku read docs on other deployment
+* HTML
+    * The HTML files passed the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgamers-library.herokuapp.com)
+        ![HTML Validator](documentation/testing/html-validator.png)
+
 * CSS 
     * The CSS file passed the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) with no errors:
         ![CSS Validator](documentation/testing/css-validator.png)
