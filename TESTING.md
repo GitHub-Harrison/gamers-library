@@ -51,7 +51,7 @@ Below is a video from both the Admins and Users point of view.
 ## [Users Point of View](https://youtu.be/HkCbdaipWF0)
 [![YouTube](documentation/testing/admin-yt.png)](https://youtu.be/U_kbEO-b1B4)
 
-## [Admins Point of View]()
+## [Admins Point of View](https://youtu.be/SFvBN6OmioY)
 [![YouTube](documentation/testing/user-yt.png)](https://youtu.be/U_kbEO-b1B4)
 
 ## Bugs
@@ -89,3 +89,10 @@ While coding my project I have come across a few issues/bugs which I believe all
         ![CSS Validator](documentation/testing/css-validator.png)
 
 ## Browser Compatibility
+
+* Below are some screenshots of what the site looks like on different browsers/screensizes.
+
+![FireFox](documentation/testing/browser/firefox.png)
+![Brave](documentation/testing/browser/brave.png)
+![iPad](documentation/testing/browser/ipad.png)
+![iPhone 11](documentation/testing/browser/iphone-11.png)
