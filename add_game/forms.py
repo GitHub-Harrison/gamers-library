@@ -10,7 +10,7 @@ class AddGameForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'pad'}),
             'image': forms.FileInput(attrs={'class': 'pad'}),
-            'description': forms.Textarea(attrs={'class': 'pad', 'cols': 60, 'rows': 5}),
+            'description': forms.Textarea(attrs={'class': 'pad', 'cols': 45, 'rows': 5}),
             'genre': forms.Select(choices=Post.GENRES, attrs={'class': 'pad'}),
             'platform': forms.Select(choices=Post.GAMING_PLATFORM, attrs={'class': 'pad'}),
             'release_date': forms.DateInput(attrs={'class': 'pad'})
