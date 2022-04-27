@@ -105,6 +105,8 @@ During this project I used multiple different technologies to help bring my idea
 * [CSS](https://en.wikipedia.org/wiki/CSS) - I used CSS language to style the overall website except for code taken from [Bootstrap](https://getbootstrap.com/).
 * [Bootstrap](https://getbootstrap.com/) - I used bootstrap to import code and speed up the development process.
 * [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in one place.
+* [GitHub Projects](https://github.com/GitHub-Harrison/gamers-library/projects/1) - GitHub Projects is what I used to keep track of my User Stories and to help me stay on track with developing the features users would need.
+* [GitHub Issues](https://github.com/GitHub-Harrison/gamers-library/issues) - GitHub Issues is where I created my User Stories, I also used the issues tab to keep track of bugs that I encountered while coding this project.
 * [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
 * [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
 * [Git](https://git-scm.com/) - Git is a free and open source version control system which I used for version control.
