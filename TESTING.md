@@ -3,7 +3,7 @@ Return back to the [README.md](README.md)
 
 The testing process has been broken into two sections; one from a users point of view which focuses on how they might interact on the site and the other from an admins point of view and how they might check the site is function as expected.
 
-# Insert am-i-responsive screenshot
+![Am I Responsive Screenshot](/documentation/testing/browser/responsive-ss.png)
 
 ## User Focused Testing
 This section consists of all testing done regarding the users features and how a user might interact on the site.
@@ -71,7 +71,7 @@ While coding my project I have come across a few issues/bugs which I believe all
 
 * PEP8
     * The only errors shown by the PEP8 Validator were relating to line too long as shown:
-    
+
     ![library Models](documentation/testing/library-models.png)
     ![addgame Forms](documentation/testing/addgame-forms.png)
 

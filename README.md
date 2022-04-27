@@ -1,6 +1,8 @@
 # Gamers Library
 Gamers Library is a complete website with a database of games created for users to be able to share what games they have played with other gamers. The purpose of this is to allow users to not only view a library of games but also comment and like each game if they wish to, this allows the user to find like minded individuals, new games to play and to share their own experience with the games they've played.
 
+![Am I Responsive Screenshot](/documentation/testing/browser/responsive-ss.png)
+
 ## User Stories
 One of the first things I did after deciding on what my project was to be able was to create some user stories to help figure out what functionality my website should have.
 
