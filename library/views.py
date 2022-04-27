@@ -39,7 +39,7 @@ def post_detail(request, slug):
             new_comment = comment_form.save(commit=False)
             # Assign current post to comment
             new_comment.post = post
-            messages.success(request, "Your comment has been added")
+            messages.success(request, "Your comment is awaiting moderation")
             # Save comment to database
             new_comment.save()
 
