@@ -13,5 +13,5 @@ class AddGameForm(forms.ModelForm):
             'description': forms.Textarea(attrs={'class': 'pad', 'cols': 45, 'rows': 5}),
             'genre': forms.Select(choices=Post.GENRES, attrs={'class': 'pad'}),
             'platform': forms.Select(choices=Post.GAMING_PLATFORM, attrs={'class': 'pad'}),
-            'release_date': forms.DateInput(attrs={'class': 'pad'})
+            'release_date': forms.DateInput(attrs={'class': 'pad', 'placeholder': 'Month Day, Year (mmm dd, yyyy)'})
         }
