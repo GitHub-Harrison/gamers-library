@@ -4,6 +4,7 @@ from django.views import View
 from django.core.paginator import Paginator
 from .models import Post
 from .forms import CommentForm
+from django.contrib import messages
 
 
 def library(response):
@@ -38,6 +39,7 @@ def post_detail(request, slug):
             new_comment = comment_form.save(commit=False)
             # Assign current post to comment
             new_comment.post = post
+            messages.success(request, "Your comment has been added")
             # Save comment to database
             new_comment.save()
 
