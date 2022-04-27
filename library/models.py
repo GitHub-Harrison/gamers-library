@@ -18,6 +18,7 @@ class Post(models.Model):
     SINGLE = 'Singleplayer'
     COOP = 'Co-op'
     RPG = 'Role-playing Game'
+    OTHER = 'Other'
     GENRES = [
         (SHOOTER, 'Shooter'),
         (ACTION_ADV, 'Action Adventure'),
@@ -32,6 +33,7 @@ class Post(models.Model):
         (SINGLE, 'Singleplayer'),
         (COOP, 'Co-op'),
         (RPG, 'Role-playing Game'),
+        (OTHER, 'Other')
     ]
     ALL = 'All Platforms'
     PC = 'PC'
@@ -40,6 +42,7 @@ class Post(models.Model):
     XB1 = 'Xbox One'
     XBX = 'Xbox Series X'
     SWITCH = 'Nintendo Switch'
+    OTHER = 'Other'
     GAMING_PLATFORM = [
         (ALL, 'All Platforms'),
         (PC, 'PC'),
@@ -47,7 +50,8 @@ class Post(models.Model):
         (PS5, 'PS5'),
         (XB1, 'Xbox One'),
         (XBX, 'Xbox Series X'),
-        (SWITCH, 'Nintendo Switch')
+        (SWITCH, 'Nintendo Switch'),
+        (OTHER, 'Other')
     ]
     title = models.CharField(max_length=180, unique=True)
     image = CloudinaryField('image', default='placeholder')
