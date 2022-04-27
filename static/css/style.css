@@ -120,6 +120,12 @@ form {
     padding: 10px;
 }
 
+/* password reset */
+
+.pw-w {
+    width: 50%;
+}
+
 /* pagination styling */
 
 .page_links {
