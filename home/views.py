@@ -5,7 +5,7 @@ from library.models import Post
 
 
 def home(response):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(approved=True)
     context = {
         'posts': posts,
     }
