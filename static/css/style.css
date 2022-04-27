@@ -204,3 +204,19 @@ footer {
         white-space: normal;
     }
 }
+
+@media (max-width: 500px) {
+    * {
+        flex-direction: column;
+    }
+    .table-responsive {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+}
