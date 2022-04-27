@@ -28,8 +28,8 @@ div {
 /* home styling */
 
 .img-h {
-    max-height: auto;
     max-width: 50%;
+    margin-left: 25%;
 }
 
 /* library styling */
