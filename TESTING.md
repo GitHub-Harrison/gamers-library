@@ -72,29 +72,29 @@ While coding my project I have come across a few issues/bugs which I believe all
 * PEP8
     * The only errors shown by the PEP8 Validator were relating to line too long as shown:
 
-    ![library Models](documentation/testing/library-models.png)
-    ![addgame Forms](documentation/testing/addgame-forms.png)
+    ![library Models](documentation/testing/validators/library-models.png)
+    ![addgame Forms](documentation/testing/validators/addgame-forms.png)
 
     * The rest of the python files came back with no errors:
 
-    ![addgame Views](documentation/testing/addgame-views.png)
-    ![library Views](documentation/testing/library-views.png)
-    ![library Forms](documentation/testing/library-forms.png)
-    ![home Views](documentation/testing/home-views.png)
+    ![addgame Views](documentation/testing/validators/addgame-views.png)
+    ![library Views](documentation/testing/validators/library-views.png)
+    ![library Forms](documentation/testing/validators/library-forms.png)
+    ![home Views](documentation/testing/validators/home-views.png)
 
 * HTML
     * The HTML files passed the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgamers-library.herokuapp.com)
-        ![HTML Validator Home](documentation/testing/html-validator.png)
-        ![HTML Validator Library](documentation/testing/html-validator-library.png)
-        ![HTML Validator Add Game](documentation/testing/html-validator-addgame.png)
-        ![HTML Validator Post Detail](documentation/testing/html-validator-gamepost.png)
-        ![HTML Validator Signup](documentation/testing/html-validator-signup.png)
-        ![HTML Validator Login](documentation/testing/html-validator-login.png)
-        ![HTML Validator Logout](documentation/testing/html-validator-logout.png)
+        ![HTML Validator Home](documentation/testing/validators/html-validator.png)
+        ![HTML Validator Library](documentation/testing/validators/html-validator-library.png)
+        ![HTML Validator Add Game](documentation/testing/validators/html-validator-addgame.png)
+        ![HTML Validator Post Detail](documentation/testing/validators/html-validator-gamepost.png)
+        ![HTML Validator Signup](documentation/testing/validators/html-validator-signup.png)
+        ![HTML Validator Login](documentation/testing/validators/html-validator-login.png)
+        ![HTML Validator Logout](documentation/testing/validators/html-validator-logout.png)
 
 * CSS 
     * The CSS file passed the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) with no errors:
-        ![CSS Validator](documentation/testing/css-validator.png)
+        ![CSS Validator](documentation/testing/validators/css-validator.png)
 
 ## Browser Compatibility
 
