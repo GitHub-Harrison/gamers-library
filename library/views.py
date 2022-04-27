@@ -35,6 +35,9 @@ def post_detail(request, slug):
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
 
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+
             # Create Comment object
             new_comment = comment_form.save(commit=False)
             # Assign current post to comment

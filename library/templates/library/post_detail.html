@@ -42,7 +42,7 @@
             </div>
             {% endfor %}
         </div>
-        <hr>
+    <hr>
     </div>
     <div>
         <div id="new-comment">
@@ -51,16 +51,20 @@
                     Your comment is awaiting moderation
                 </div>
             {% else %}
-                
+            {% if user.is_authenticated %}
                 <form method="post" style="margin-top: 1.3em;">
                     <h3>Leave a comment</h3>
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
                 </form>
+            {% else %}
+                <div>
+                    <h3>Please <a href="{% url 'account_login' %}">Login</a> to comment.</h3>
+                </div>
+            {% endif %}
             {% endif %}
         </div>
     </div>
-
 
 {% endblock content %}
