@@ -71,10 +71,12 @@ While coding my project I have come across a few issues/bugs which I believe all
 
 * PEP8
     * The only errors shown by the PEP8 Validator were relating to line too long as shown:
+    
     ![library Models](documentation/testing/library-models.png)
     ![addgame Forms](documentation/testing/addgame-forms.png)
 
     * The rest of the python files came back with no errors:
+
     ![addgame Views](documentation/testing/addgame-views.png)
     ![library Views](documentation/testing/library-views.png)
     ![library Forms](documentation/testing/library-forms.png)
