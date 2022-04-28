@@ -57,3 +57,9 @@ def post_detail(request, slug):
     }
 
     return render(request, template, context)
+
+
+# class UpdateComment():
+#     model = CommentForm
+#     template = library/update_comment.html
+#     fields = ['body']
