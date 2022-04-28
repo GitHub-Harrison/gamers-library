@@ -8,12 +8,12 @@
 
     <h1>Update Comment</h1>
     <hr>
-
-    <form method="post" style="margin-top: 1.3em;">
-        <h3>Update your comment</h3>
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary  btn-lg">Update</button>
-    </form>
-
+    <div class="log-center">
+        <form method="post" style="margin-top: 1.3em;">
+            <h3>Update your comment</h3>
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary  btn-lg">Update</button>
+        </form>
+    </div>
 {% endblock content %}

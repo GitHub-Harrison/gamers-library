@@ -37,7 +37,7 @@
                     <span>
                         {{ comment.created_on }}
                     </span>
-                    <a href="">Edit</a>
+                    <a href="{% url 'update_comment' %}">Edit</a>
                 </p>
                 {{ comment.body | linebreaks }}
             </div>
