@@ -23,7 +23,7 @@ Gamers Library | Library
                 </tr>
             </thead>
             <tbody>
-                <!-- {% for post in page.object_list %} -->
+                {% for post in page.object_list %}
                 {% if post.approved %}
                 <tr>
                     <td>
@@ -44,7 +44,7 @@ Gamers Library | Library
                     <td>{{ post.release_date }}</td>
                 </tr>
                 {% endif %}
-                <!-- {% endfor %} -->
+                {% endfor %}
             </tbody>
         </table>
     </div>
