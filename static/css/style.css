@@ -85,15 +85,6 @@ form.comment_form {
     box-shadow: 3px 3px 3px 3px black;
 }
 
-form {
-    background-color: beige;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 25px;
-    box-shadow: 3px 3px 3px 3px black;
-}
-
-
 .form-center {
     display:flex;
     justify-content: center;
@@ -101,6 +92,11 @@ form {
 
 #add-game-form {
     margin-top: 50px;
+    background-color: beige;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px 3px black;
 }
 
 .pad {
