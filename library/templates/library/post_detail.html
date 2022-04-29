@@ -32,14 +32,26 @@
 
             {% for comment in comments %}
             <div class="comment">
-                <p>
-                    <strong>{{ comment.name }}</strong>
-                    <span>
-                        {{ comment.created_on }}
-                    </span>
-                    <a href="{% url 'update_comment' %}">Edit</a>
-                </p>
-                {{ comment.body | linebreaks }}
+                <div class="comment_info">
+                    <p>
+                        <strong>{{ comment.name }}</strong>
+                        <span>
+                            {{ comment.created_on }}
+                        </span>
+                    </p>
+                </div>
+                <div class="comment_body">
+                        {{ comment.body | linebreaks }}
+                </div>
+                {%if comment.email == request.user.email%}
+                <a class="submit-btn" href="{% url 'update_comment' comment.id%}">Edit</a>
+
+                <form class="delete_button" action = "{% url 'delete_comment' comment.id %}" method = "POST">
+                    {% csrf_token %}
+                    <input id="path" name="path" type="hidden" value="{{request.path}}"/>
+                    <button class="submit-btn" type="Submit" >Delete</button>
+                </form>
+                {%endif%}
             </div>
             {% endfor %}
         </div>
@@ -53,7 +65,7 @@
                 </div>
             {% else %}
             {% if user.is_authenticated %}
-                <form method="post" style="margin-top: 1.3em;">
+                <form class="comment_form" method="post" style="margin-top: 1.3em;">
                     <h3>Leave a comment</h3>
                     {{ comment_form | crispy }}
                     {% csrf_token %}
