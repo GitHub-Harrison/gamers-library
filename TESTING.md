@@ -11,11 +11,13 @@ This section consists of all testing done regarding the users features and how a
 ### User Story Testing
 Testing user stories required me to take a user first approach to the website and think solely about what a user would want to be able to do while on the site. Below are the user stories I Testing for:
 
-* Account Creation
+* Pagination
 * Viewing the Library
 * Adding a Game
-* Commenting
-* Pagination
+* [Account Creation](https://www.youtube.com/watch?v=UlrMBIEg5z8)
+[![YouTube](documentation/testing/account-creation-yt.png)](https://www.youtube.com/watch?v=UlrMBIEg5z8)
+* [Commenting](https://www.youtube.com/watch?v=O0eHcAJg7H0)
+[![YouTube](documentation/testing/edit-delete-yt.png)](https://www.youtube.com/watch?v=O0eHcAJg7H0)
 
 ## Admin Focused Testing
 This section focuses more on how an admin might interact with the site and what features they might use.
