@@ -9,7 +9,7 @@ The testing process has been broken into two sections; one from a users point of
 This section consists of all testing done regarding the users features and how a user might interact on the site.
 
 ### User Story Testing
-Testing user stories required me to take a user first approach to the website and think solely about what a user would want to be able to do while on the site. Below are the user stories I Testing for:
+Testing user stories required me to take a user first approach to the website and think solely about what a user would want to be able to do while on the site. Below are the user stories I Testing for (All testing can be found in the Final Testing Videos.):
 
 * Pagination
 * Viewing the Library
