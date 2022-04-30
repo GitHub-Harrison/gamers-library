@@ -8,7 +8,7 @@
 
     <h1>Update Comment</h1>
     <hr>
-    <div class="log-center">
+    <div>
         <form class="comment_form" action="{% url 'edit_comment' comment.id%}" method="post" style="margin-top: 1.3em;">
             <h3>Update your comment</h3>
             {{ comment_form | crispy }}
