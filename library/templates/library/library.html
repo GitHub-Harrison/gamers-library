@@ -41,7 +41,7 @@ Gamers Library | Library
                     <td>{{ post.description }}</td>
                     <td>{{ post.genre }}</td>
                     <td>{{ post.platform }}</td>
-                    <td>{{ post.release_date }}</td>
+                    <td>{{ post.release_date|date:'j M, Y' }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
