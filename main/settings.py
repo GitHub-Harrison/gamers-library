@@ -73,7 +73,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_VERIFICATION = "none"
-ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -162,7 +162,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  # noqa
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
