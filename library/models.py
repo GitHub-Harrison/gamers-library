@@ -53,15 +53,19 @@ class Post(models.Model):
         (SWITCH, 'Nintendo Switch'),
         (OTHER, 'Other')
     ]
-    title = models.CharField(max_length=180, unique=True)
+    title = models.CharField(
+        max_length=180, unique=True, null=False, blank=False)
     image = CloudinaryField('image', default='placeholder')
-    description = models.TextField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_post', null=True)
+    description = models.TextField(null=False, blank=False)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='game_post', null=False)
     genre = models.CharField(max_length=80, choices=GENRES, default=SHOOTER)
-    release_date = models.CharField(max_length=20)
-    platform = models.CharField(max_length=15, choices=GAMING_PLATFORM, default=ALL)
+    release_date = models.DateField(null=False, blank=False)
+    platform = models.CharField(
+        max_length=15, choices=GAMING_PLATFORM, default=ALL)
     created_on = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(
+        max_length=200, unique=True, null=False, blank=False)
     approved = models.BooleanField(default=False)
 
     class Meta:
@@ -75,9 +79,10 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
@@ -86,4 +91,4 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return 'Comment {} by {}'.format(self.body, self.user)
