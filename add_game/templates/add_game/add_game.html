@@ -12,6 +12,7 @@ Gamers Library | Add Games
             <h3 class="form-center">Add a Game</h3>
             <hr>
             {% csrf_token %}
+            {{ form.slug }}
             <label class="pad" for="id_title">Game Title:</label> <br> 
             {{ form.title }} <br>
             <label class="pad" for="id_image">Image:</label> <br>
@@ -29,4 +30,20 @@ Gamers Library | Add Games
         </form>
     </div>
 
+{% endblock %}
+
+{% block js %}
+<script>
+    // convert Game title to slug-format on front-end
+    let title = document.getElementById("id_title");
+    let slug = document.getElementById("id_slug");
+    title?.addEventListener("keyup", convertToSlug);
+    slug?.addEventListener("keyup", convertToSlug);
+
+    function convertToSlug() {
+      slug.value = title.value.toLowerCase()
+                 .replace(/ /g, '-')
+                 .replace(/[^\w-]+/g, '');
+    }
+</script>
 {% endblock %}
