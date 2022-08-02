@@ -66,6 +66,8 @@ While coding my project I have come across a few issues/bugs which I believe all
 * One bug I had which has been resolved was regarding IntergrityError, I have no memory of what was changed to resolve this issue. [**IntergrityError - null value in column "user_id" of relation "library_post" violates not-null constraint**](https://github.com/GitHub-Harrison/gamers-library/issues/15) Issue[15](https://github.com/GitHub-Harrison/gamers-library/issues/15)
 * The final bug I documented was regarding 'column library_post.user_id does not exist' I have not seen this issue since so I believe this issue to be fixed. [**column library_post.user_id does not exist**]((https://github.com/GitHub-Harrison/gamers-library/issues/10)) Issue [#10](https://github.com/GitHub-Harrison/gamers-library/issues/10)
 
+* A new bug appeared after submission: [**IntergrityError**](https://github.com/GitHub-Harrison/gamers-library/issues/16), this error was easily fixed.
+
 ### Remaining Bugs
 * Currently there are no bugs that I am aware of.
 
@@ -73,16 +75,14 @@ While coding my project I have come across a few issues/bugs which I believe all
 
 * PEP8
     * The only errors shown by the PEP8 Validator were relating to line too long as shown:
-
-    ![library Models](documentation/testing/validators/library-models.png)
-    ![addgame Forms](documentation/testing/validators/addgame-forms.png)
+        ![library Models](documentation/testing/validators/library-models.png)
+        ![addgame Forms](documentation/testing/validators/addgame-forms.png)
 
     * The rest of the python files came back with no errors:
-
-    ![addgame Views](documentation/testing/validators/addgame-views.png)
-    ![library Views](documentation/testing/validators/library-views.png)
-    ![library Forms](documentation/testing/validators/library-forms.png)
-    ![home Views](documentation/testing/validators/home-views.png)
+        ![addgame Views](documentation/testing/validators/addgame-views.png)
+        ![library Views](documentation/testing/validators/library-views.png)
+        ![library Forms](documentation/testing/validators/library-forms.png)
+        ![home Views](documentation/testing/validators/home-views.png)
 
 * HTML
     * The HTML files passed the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgamers-library.herokuapp.com)
