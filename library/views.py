@@ -41,6 +41,7 @@ def post_detail(request, slug):
 
             # Create Comment object
             new_comment = comment_form.save(commit=False)
+            new_comment.user = request.user
             # Assign current post to comment
             new_comment.post = post
             messages.success(request, "Your comment is awaiting moderation")
@@ -61,7 +62,10 @@ def post_detail(request, slug):
 
 
 def update_comment(request, id):
-    # this view returns page with context, and from this page we are editing comment
+    """
+    this view returns page with context,
+    and from this page we are editing comment
+    """
     comment_obj = get_object_or_404(Comment, id=id)
     comment_form = CommentForm(instance=comment_obj)
     context = {
@@ -74,7 +78,8 @@ def update_comment(request, id):
 def edit_comment(request, id):
     if request.POST:
         new_body = request.POST.get("body")
-        # From post data we are getting data body. and then getting object comment and saving with a new data
+        # From post data we are getting data body.
+        # and then getting object comment and saving with a new data
         comment_obj = get_object_or_404(Comment, id=id)
         comment_obj.body = new_body
         comment_obj.save()
@@ -85,7 +90,8 @@ def edit_comment(request, id):
 def delete_comment(request, id):
     if request.POST:
         url_path = request.POST.get("path")
-        # we have created hidden inputs in post_detail.html and from here getting path
+        # we have created hidden inputs in post_detail.html
+        # and from here getting path
 
         comment_obj = get_object_or_404(Comment, id=id)
 
