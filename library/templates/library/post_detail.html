@@ -7,6 +7,10 @@
     <div>
         <div>
             <h1>{{ post.title }}</h1>
+            {% if post.user == request.user %}
+                <a href="{% url 'update_game' post.id %}">Edit</a> |
+                <a href="{% url 'delete_game' post.id %}">Delete</a>
+            {% endif %}
         </div>
         <hr>
         <div>
@@ -34,7 +38,7 @@
             <div class="comment">
                 <div class="comment_info">
                     <p>
-                        <strong>{{ comment.name }}</strong>
+                        <strong>{{ comment.user.username }}</strong>
                         <span>
                             {{ comment.created_on }}
                         </span>
@@ -43,7 +47,7 @@
                 <div class="comment_body">
                         {{ comment.body | linebreaks }}
                 </div>
-                {%if comment.email == request.user.email%}
+                {% if comment.user.email == request.user.email %}
                 <a class="submit-btn" href="{% url 'update_comment' comment.id%}">Edit</a>
 
                 <form class="delete_button" action = "{% url 'delete_comment' comment.id %}" method = "POST">
@@ -51,7 +55,7 @@
                     <input id="path" name="path" type="hidden" value="{{request.path}}"/>
                     <button class="submit-btn" type="Submit" >Delete</button>
                 </form>
-                {%endif%}
+                {% endif %}
             </div>
             {% endfor %}
         </div>
