@@ -97,6 +97,18 @@ Before I started any of the coding I first created some wireframes for how I env
 * A simple logout screen that allows the user to logout of their account and redirects to the home page.
 ![Logout](documentation/readme/features/logout.png)
 
+### Post CRUD
+
+* I added a new feature to each post where the posts creator can now edit/delete their post if they wish to.
+
+* The post detail page now shows a edit/delete link when the creator of the post is viewing the page, the delete function is instant with no pop up to check the user is sure.
+
+* The edit/update form prefills the form with the existing data already.
+
+![Post CRUD](/documentation/readme/features/crud-post.png)
+![Update Post Form](/documentation/readme/features/update-game.png)
+![Delete Game](/documentation/readme/features/delete-game.png)
+
 ## Technologies Used
 During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
 * [Python](https://wiki.python.org/moin/FrontPage) - This language was used for the back end development.
