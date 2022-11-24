@@ -3,6 +3,8 @@ Gamers Library is a complete website with a database of games created for users 
 
 ![Am I Responsive Screenshot](/documentation/testing/browser/responsive-ss.png)
 
+Live site : https://gamers-library.onrender.com/
+
 ## User Stories
 One of the first things I did after deciding on what my project was to be able was to create some user stories to help figure out what functionality my website should have.
 
@@ -133,6 +135,9 @@ This includes:
 * Browser Compatibility.
 
 ## Deployment
+
+### The deployment steps have changed since heroku has changed their free hosting service
+
 This project was deployed using Heroku.
 * Steps for deployment:
     * Firstly, in Gitpod:
